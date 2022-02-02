@@ -5,7 +5,7 @@ var password=document.getElementById("password").value;
 if(username=="admin"&& password=="user")
 {
     
-	window.open("menu.html","_self");
+	window.open("menu.html","_parent");
     return false;
 
 }
