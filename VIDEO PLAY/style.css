@@ -18,7 +18,9 @@ body::-webkit-scrollbar-thumb
 }
 body::-webkit-scrollbar-thumb:active
 {
-    background: rgb(233, 16, 16);
+   
+	background: url('1.jpg');
+    background-size: cover;
 }
 body
 {
