@@ -2,32 +2,37 @@
 <html lan="en" and dir="Itr">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="style2.css">
-   
-<script src ="login2.js"> </script>
     
+     
     <script type = "text/javascript" >  
     function preventBack() { window.history.forward(); }  
     setTimeout("preventBack()", 0);  
     window.onunload = function () { null };  
 </script> 
 
+    <script language="javascript">
+function pasuser(form) { 
+if (form.id.value=="pass") { 
+if (form.pass.value=="pass")
+ { window.location="menu.html" } 
+ 
+else { alert("Wrong Password") } 
+} 
+else { alert("Wrong Username") } 
+} 
+</script>
+<body onload="getcookiedata()">
+<form name="login"  class="box">
 
-</head>
-<body>
-<form class="box" method="POST">
-
-<h1>
-    login
-</h1>
-<input type="text" name="" placeholder="Enter Username" id="username">
-<input type="password" name="" placeholder="Enter Password" id="password">
-<input type="submit" name="" value="Login"  onclick="validate()">
+<input type="text" name="id" placeholder="Enter Username" id="username"> 
+<input type="password" name="pass" placeholder="Enter Password" id="password">
 
 
+
+<input value="Login" onclick="pasuser(this.form)" type="button">
 </form>
+
+
 
 
 </body>
@@ -35,3 +40,80 @@
 
 
 </html>
+<style>
+body{
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+     background: url('1.jpg');
+    background-size: cover;
+}
+.box{
+  width:500px;
+  padding:30px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  background:;
+  text-align:center;
+
+}
+.box h1
+{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.box input[type="text"],.box input[type="password"]
+{
+border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border:3px solid #0367fd;
+padding:20px 10px;
+width:300px;
+outline: none;
+color: white;
+border-radius: 24px;
+transition:0.25px;
+}
+
+.box input[type="text"]:focus,.box input[type="password"]:focus{
+
+width:270px;
+border-color: #ffc400ec;
+}
+
+.box input[type="button"]{
+
+
+    border: 0;
+background: none;
+display: block;
+margin: 20px auto;
+text-align: center;
+border:3px solid #ffc400ec;
+padding:14px 35px;
+outline: none;
+color: ;
+border-radius: 24px;
+transition:0.25px;
+cursor:pointer;
+    
+}
+.box input[type="button "]:hover{
+    background: #ffc400ec;
+}
+.box input[type="checkbox"]{
+ text-transform: uppercase;
+    font-weight: 700;
+	text-align: center;
+	color: white;
+	}
+
+</style>
+   
+
